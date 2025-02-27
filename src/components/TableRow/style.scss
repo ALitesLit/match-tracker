@@ -1,0 +1,172 @@
+.table__row {
+    width: calc(100% - 30px);
+    min-height: 87px;
+
+    padding: 10px 15px;
+
+    border-radius: 4px;
+    background-color: rgba(11, 14, 18, 1);
+    color: white;
+
+    @media screen and (max-width: 768px) {
+        font: 600 14px "Inter";
+    }
+
+
+    .vs {
+        display: none;
+
+        &::before, &::after {
+            height: 1px;
+            width: 100%;
+            background-color: rgba(49, 58, 71, 1);
+
+            content: "";
+        }
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            font: 600 14px "Inter";
+            color: rgba(49, 58, 71, 1);
+
+            width: 100%;
+            height: 40px;
+        }
+    }
+
+
+    .table__row-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .table__row-score {
+            text-align: center;
+    
+            .status {
+                font: 600 12px "Inter";
+                line-height: 14.52px;
+                border-radius: 4px;
+    
+                padding: 6px 21px;
+
+                @media screen and (max-width: 768px) {
+                    padding: 2px 10px;
+                }
+            }
+        }
+    
+        .name-team {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+    
+        .icon {
+            width: 48px;
+            height: 48px;
+    
+            background-image: url("../../assets/icon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+    
+            display: block;
+        }
+    }
+
+    .table__row-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .label-text {
+            color: rgba(250, 250, 250, 0.4);
+        }
+
+        .table__row-info-content {
+            width: 45%;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 10px;
+            gap: 8px;
+
+            @media screen and (max-width: 768px) {
+                gap: 4px;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+
+            .player__card {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                flex-wrap: wrap;
+                padding: 8px 20px;
+
+                background-color: rgba(16, 19, 24, 1);
+                font: 600 16px "Inter";
+
+
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                }
+
+                p {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .player-frame {
+                    width: 36px;
+                    height: 36px;
+
+                    background-image: url("../../assets/user-frames.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .btn-center {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0px;
+    }
+    
+    .table__row-show-btn {
+        background-color: transparent;
+        border: none;
+        background-image: url("../../assets/drop.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+
+        width: 28px;
+        height: 28px;
+
+
+        @media screen and (max-width: 768px) {
+            justify-items: center;
+        }
+    }
+}
